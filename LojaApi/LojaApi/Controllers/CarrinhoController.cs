@@ -58,5 +58,26 @@ namespace LojaApi.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
         }
+
+        [Route("api/carrinho/{idCarrinho}/produto/{idProduto}/quantidade")]
+        public HttpResponseMessage Put([FromBody] Produto produto, [FromUri] int idCarrinho, [FromUri] int idProduto)
+        {
+            try
+            {
+                CarrinhoDAO dao = new CarrinhoDAO();
+                Carrinho carrinho = dao.Busca(idCarrinho);
+                carrinho.TrocaQuantidade(produto);
+                
+                return Request.CreateResponse(HttpStatusCode.OK, "Produto alterado com sucesso!");
+            }
+            catch (KeyNotFoundException)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+            catch (NullReferenceException)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound, string.Format("Produto {0} não encontrado!", produto.Id));
+            }
+        }
     }
 }

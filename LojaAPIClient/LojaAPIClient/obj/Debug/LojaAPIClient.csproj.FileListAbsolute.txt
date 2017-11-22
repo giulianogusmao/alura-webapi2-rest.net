@@ -4,6 +4,3 @@ c:\users\rafael\documents\visual studio 2015\Projects\LojaAPIClient\LojaAPIClien
 c:\users\rafael\documents\visual studio 2015\Projects\LojaAPIClient\LojaAPIClient\bin\Debug\LojaAPIClient.pdb
 c:\users\rafael\documents\visual studio 2015\Projects\LojaAPIClient\LojaAPIClient\obj\Debug\LojaAPIClient.exe
 c:\users\rafael\documents\visual studio 2015\Projects\LojaAPIClient\LojaAPIClient\obj\Debug\LojaAPIClient.pdb
-C:\Users\giuliano.gusmao\Downloads\Cursos\Alura\C# Web Api - REST no .NET\src\LojaAPIClient\LojaAPIClient\bin\Debug\LojaAPIClient.exe.config
-C:\Users\giuliano.gusmao\Downloads\Cursos\Alura\C# Web Api - REST no .NET\src\LojaAPIClient\LojaAPIClient\obj\Debug\LojaAPIClient.exe
-C:\Users\giuliano.gusmao\Downloads\Cursos\Alura\C# Web Api - REST no .NET\src\LojaAPIClient\LojaAPIClient\obj\Debug\LojaAPIClient.pdb

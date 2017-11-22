@@ -41,5 +41,22 @@ namespace LojaApi.Controllers
 
             return response;
         }
+
+        [Route("api/carrinho/{idCarrinho}/produto/{idProduto}")]
+        public HttpResponseMessage Delete([FromUri] int idCarrinho, [FromUri] int idProduto)
+        {
+            try
+            {
+                CarrinhoDAO dao = new CarrinhoDAO();
+                Carrinho carrinho = dao.Busca(idCarrinho);
+                carrinho.Remove(idProduto);
+
+                string mensagem = string.Format("Produto {0} deletado com sucesso do carrinho {1}!", idProduto, idCarrinho);
+                return Request.CreateResponse(HttpStatusCode.OK, mensagem);
+            } catch(KeyNotFoundException)
+            {
+                return Request.CreateResponse(HttpStatusCode.NotFound);
+            }
+        }
     }
 }
